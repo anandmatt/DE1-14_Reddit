@@ -1,0 +1,13 @@
+FROM anandmatt/spark_base
+
+ENV MASTER_CONTAINER_NAME=sparkmaster
+ENV CORES=3
+ENV MEMORY=6G
+ENV SPARK_WORKER_WEBUI_PORT 8081
+ENV SPARK_WORKER_LOG /usr/local/spark/logs
+
+
+EXPOSE 8081
+
+# ENTRYPOINT $SPARK_HOME/bin/spark-class org.apache.spark.deploy.worker.Worker -c $CORES -m $MEMORY spark://$MASTER_CONTAINER_NAME:7077
+CMD $SPARK_HOME/sbin/start-worker.sh spark://sparkmaster:7077

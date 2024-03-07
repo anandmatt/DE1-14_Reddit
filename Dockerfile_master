@@ -1,0 +1,10 @@
+FROM anandmatt/spark_base
+
+ENV SPARK_MASTER_PORT 7077
+ENV SPARK_MASTER_WEBUI_PORT 8080
+ENV SPARK_MASTER_LOG /usr/local/spark/logs
+
+EXPOSE 8080
+
+# ENTRYPOINT $SPARK_HOME/bin/spark-class org.apache.spark.deploy.master.Master
+CMD $SPARK_HOME/sbin/start-master.sh
