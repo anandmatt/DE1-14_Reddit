@@ -6,6 +6,15 @@ ENV MEMORY=6G
 ENV SPARK_WORKER_WEBUI_PORT 8081
 ENV SPARK_WORKER_LOG /usr/local/spark/logs
 
+# Install libraries
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN apt-get install -y openjdk-17-jdk
+RUN apt install -y python3-pip
+COPY ./requirements.txt .
+RUN python3 -m pip install -r requirements.txt
+RUN python3 -m pip install jupyterlab --user
+
 
 EXPOSE 8081
 
