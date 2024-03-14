@@ -123,10 +123,4 @@ The above steps presemt a systematic way to set up a Spark cluster connected by 
     docker stack deploy --compose-file docker-compose.yml spark-stack
     ```
 
-However, we ran into issues using the above method and so decided to continue with the method that worked. Future efforts may be taken to identify the cause and resolve the issues faced.
-=======
-    ```
-    docker stack deploy --compose-file docker-compose.yml spark-stack
-    ```
-However, we ran into issues using the above method and so decided to continue with the method that worked. Future efforts may be taken to identify the cause and resolve the issues faced.
 >>>>>>> a1b7c4bcc93ae2f52263c280bab97467d173347a
