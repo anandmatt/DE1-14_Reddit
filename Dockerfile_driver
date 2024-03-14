@@ -8,7 +8,6 @@ ENV MASTER_CONTAINER_NAME=spark-master
 # Install libraries
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get install -y openjdk-17-jdk
 RUN apt install -y python3-pip
 COPY ./requirements.txt .
 RUN python3 -m pip install -r requirements.txt
