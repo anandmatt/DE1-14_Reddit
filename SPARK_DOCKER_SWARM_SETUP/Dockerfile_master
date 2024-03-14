@@ -10,9 +10,8 @@ RUN apt-get -y upgrade
 RUN apt install -y python3-pip
 COPY ./requirements.txt .
 RUN python3 -m pip install -r requirements.txt
-RUN python3 -m pip install jupyterlab --user
 
-EXPOSE 8080
+EXPOSE 7077 8080
 
 # ENTRYPOINT $SPARK_HOME/bin/spark-class org.apache.spark.deploy.master.Master
 CMD $SPARK_HOME/sbin/start-master.sh
