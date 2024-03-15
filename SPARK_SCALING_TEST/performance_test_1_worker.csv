@@ -1,0 +1,15 @@
+TestID,Task,Duration
+1_workers,aggregate_subreddit_stats,75.90
+1_workers,agg,61.88
+1_workers,join,233.70
+1_workers,complex_transformation,70.99
+1_workers,window_function,135.18
+1_workers,explode_split,113.58
+1_workers,avg_summary_by_author,54.91
+1_workers,distinct_subreddit_count,95.22
+1_workers,max_summary_length_per_subreddit,85.13
+1_workers,top_title_per_subreddit,70.09
+1_workers,word_count_in_titles,53.92
+1_workers,self_join_shuffle,3010.62
+1_workers,cross_join,58.92
+1_workers,complex_aggregation,141.01
