@@ -27,6 +27,14 @@ To scale your Apache Spark and HDFS cluster, both horizontally and vertically, f
 5. **Verify Connection:**
    - Check the Spark master’s web UI (typically available at `http://MASTER_IP:8080`) to confirm that the new worker nodes are connected and listed.
 
+### Using the `new_spark_worker.sh` Script for Automation:
+
+- In order to automate the addition of new Spark worker nodes to your cluster, consider using a predefined script.
+- It's important to set the `MASTER_IP` variable within the script to the master node's IP address.
+- For efficient recognition and utilization of the new worker nodes, add their IP addresses to the `/opt/spark/conf/workers` file on the master node.
+
+This guide, along with the script utility, aims to facilitate the straightforward expansion of your Apache Spark cluster by integrating additional worker nodes, thus boosting its capacity for large-scale data analytics tasks.
+
 ### Scaling HDFS
 
 **Adding DataNodes:**
@@ -49,6 +57,7 @@ To scale your Apache Spark and HDFS cluster, both horizontally and vertically, f
 
 5. **Verify Connection:**
    - Use the command `hdfs dfsadmin -report` or check the HDFS NameNode web UI to ensure the new DataNodes are registered and communicating properly.
+   
 
 ## Vertical Scaling
 
